@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: black;
+            color: rgb(255, 255, 255);
+            font-size: 90px;
+            width: auto;
+            height: 100px;
+        }
+        #H1{
+            color: tomato;
+            text-align: center;
+        }
+        div
+        {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>JST-Jayanth Standard Time</h2>
+    <H1 id="H1">TIME</H1>
+
+    <div>
+        <h1 id="hr"></h1>
+        <h1 id="min"></h1>
+        <h1 id="sec"></h1>
+    </div>
+    <script>
+        function dc() {
+        var present=new Date();
+
+        var hr=present.getHours()
+        var min=present.getMinutes()
+        var sec=present.getSeconds()
+
+        var hor=document.getElementById("hr")
+        var minu=document.getElementById("min")
+        var seco=document.getElementById("sec")
+     
+       hor.innerHTML=hr+" " + ":";
+       minu.innerHTML=min+" " + ":";
+       seco.innerHTML=sec +" " ;
+        }
+
+         setInterval(dc,1000);
+        
+    </script>
+</body>
+</html>

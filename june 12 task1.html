@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>REST OPERATOR & SPREAD OPERATOR</h1></center>
+    <pre style="font-size: larger;">
+        var obj1={
+            "id": 1,
+     "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+     "price":  9.85,
+     "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+     "category": "women's clothing"
+     }
+   
+        ------SPREAD OPERATOR-------
+
+        function name() {
+            a= Object.values(obj1);
+                a.forEach(ele => {
+                console.log(ele);  
+                });
+        }
+        var comb={...obj1 }
+            name(comb)
+    
+        ------output--------
+        
+        MBJ Women's Solid Short Sleeve Boat Neck V 
+        9.85
+        95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem
+        women's clothing
+
+
+        ------REST OPERATOR-------
+        function name(...o) {
+           a= Object.values(o[0]);
+            a.forEach(ele => {
+             console.log(ele);  
+            });
+        }
+         console.log(name(obj));
+
+
+         ------output--------
+    
+         MBJ Women's Solid Short Sleeve Boat Neck V 
+         9.85
+         95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem
+         women's clothing
+     
+    </pre>
+    <script>
+        var obj1={
+           "id": 1,
+    "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+    "price":  9.85,
+    "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+    "category": "women's clothing"
+    }
+  
+
+    function name() {
+          a= Object.values(obj1);
+           a.forEach(ele => {
+            console.log(ele);  
+           });
+    }
+    var comb={...obj1 }
+        name(comb)
+
+
+    //     function name(...o) {
+    //       a= Object.values(o[0]);
+    //        a.forEach(ele => {
+    //         console.log(ele);  
+    //        });
+    // }
+    //     console.log(name(obj));
+
+      
+    </script>
+</body>
+</html> 
+
+
